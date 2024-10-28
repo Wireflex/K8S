@@ -39,17 +39,17 @@ kube-state-metrics:
 
   rbac:
     # If true, create & use RBAC resources
-    create: true
+    create: false
 
     # Set to a rolename to use existing role - skipping role creating - but still doing serviceaccount and rolebinding to it, rolename set here.
     # useExistingRole: your-existing-role
 
     # If set to false - Run without Cluteradmin privs needed - ONLY works if namespace is also set (if useExistingRole is set this name is used as ClusterRole or Role to bind to)
-    useClusterRole: true
+    useClusterRole: false
 
   serviceAccount:
     # Specifies whether a ServiceAccount should be created, require rbac true
-    create: true
+    create: false
     # The name of the ServiceAccount to use.
     # If not set and create is true, a name is generated using the fullname template
     name:
